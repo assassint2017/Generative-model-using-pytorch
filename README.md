@@ -9,5 +9,3 @@ in my code, i use MNIST to test the network, but its very easy to switch dataset
 /home/zcy/Desktop/DCGAN_36.png
 
 here is result when i training DCGAN at 36 epoch
-
-/home/zcy/Desktop/DCGAN_36.png
