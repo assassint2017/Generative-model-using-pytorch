@@ -14,6 +14,8 @@ import matplotlib.pyplot as plt
 
 import tensorboardX
 
+from my_dataset import MyDataSet
+
 # Hyper parameters
 epoch_num = 200
 img_size = 64  # size of generated image
@@ -23,7 +25,7 @@ lr_c = 0.0002  # learning rate for Critic
 latent = 100  # dim of latent space
 img_channel = 1  # channel of generated image
 init_channel = 16  # control the initial Conv channel of the Generator and Discriminator
-workers = 2  # subprocess number for load the image
+workers = 2  # subprocess number for load   the image
 k = 5  # train Critic K times and then train Generator one time
 dataset_size = 60000  # image number of your training set
 
@@ -95,6 +97,7 @@ class Generator(nn.Module):
         for layer in self.modules():
 
             if isinstance(layer, nn.ConvTranspose2d):
+
                 nn.init.normal(layer.weight.data, 0, 0.02)
 
             elif isinstance(layer, nn.BatchNorm2d):
@@ -171,6 +174,7 @@ class Critic(nn.Module):
 net_g = Generator().cuda()
 net_c = Critic().cuda()
 
+
 # use tensorboard draw the computational graph
 writer.add_graph(net_g, Variable(torch.randn(batch_size, latent, 1, 1).cuda()))
 
@@ -207,7 +211,7 @@ for epoch in range(epoch_num):
 
         output_real = net_c(real_data)
 
-        loss_c = 0.5 * torch.mean(output_real - output_fake)
+        loss_c = torch.mean(output_fake - output_real)
 
         opt_c.zero_grad()
         loss_c.backward()
@@ -218,7 +222,7 @@ for epoch in range(epoch_num):
 
             output_fake = net_c(net_g(get_noise()))
 
-            loss_g = 0.5 * torch.mean(output_fake)
+            loss_g = - torch.mean(output_fake)
 
             opt_g.zero_grad()
             loss_g.backward()
@@ -235,3 +239,4 @@ for epoch in range(epoch_num):
             plt.pause(0.01)
 
 plt.show()
+
