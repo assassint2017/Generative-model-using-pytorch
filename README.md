@@ -1,8 +1,9 @@
 # Generative-model-GAN-VAE-using-pytorch
 
-implement GANs and VAE using pytorch
+implement **GANs** and **VAE** using **pytorch**
 
-GANs include DCGAN LSGAN WGAN WGAN-GP
+GANs include **DCGAN LSGAN WGAN WGAN-GP**
+VAE is from the paper **Auto-Encoding Variational Bayes**
 
 in my code, i use MNIST to test the network, but its very easy to switch dataset of you own
 
