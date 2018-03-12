@@ -12,12 +12,9 @@ here is result when i training DCGAN at 36 epoch
 ![image](https://github.com/assassint2017/Generative-model-GAN-VAE-using-pytorch/blob/master/img/DCGAN_36.png)
 
 next are some humanface generate by WGAN-GP
+
 ![face1](https://github.com/assassint2017/Generative-model-GAN-VAE-using-pytorch/blob/master/img/face1.png)
-
 ![face2](https://github.com/assassint2017/Generative-model-GAN-VAE-using-pytorch/blob/master/img/face2.png)
-
 ![face3](https://github.com/assassint2017/Generative-model-GAN-VAE-using-pytorch/blob/master/img/face3.png)
-
 ![face4](https://github.com/assassint2017/Generative-model-GAN-VAE-using-pytorch/blob/master/img/face4.png)
-
 ![face5](https://github.com/assassint2017/Generative-model-GAN-VAE-using-pytorch/blob/master/img/face5.png)
