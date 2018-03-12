@@ -13,8 +13,16 @@ here is result when i training DCGAN at 36 epoch
 
 next are some humanface generate by WGAN-GP
 
+the image use to train the WGAN is from baidu image
+
 ![face1](https://github.com/assassint2017/Generative-model-GAN-VAE-using-pytorch/blob/master/img/face1.png)
 ![face2](https://github.com/assassint2017/Generative-model-GAN-VAE-using-pytorch/blob/master/img/face2.png)
 ![face3](https://github.com/assassint2017/Generative-model-GAN-VAE-using-pytorch/blob/master/img/face3.png)
 ![face4](https://github.com/assassint2017/Generative-model-GAN-VAE-using-pytorch/blob/master/img/face4.png)
 ![face5](https://github.com/assassint2017/Generative-model-GAN-VAE-using-pytorch/blob/master/img/face5.png)
+
+finall is the gif from training a VAE use MNIST datasset
+
+leftside is the reconstruction image,middle is the training image, and rightside is the image generate from the noise
+
+![gif](https://github.com/assassint2017/Generative-model-GAN-VAE-using-pytorch/blob/master/img/VAE-MNIST.gif)
